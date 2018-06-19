@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section id='references'>
+    {{ with .Site.GetPage "section" "references" }}
+    {{ .Content }}
+    <div class='references-container'>
+        {{ range .Pages }}
+        <div class='reference'>
+            {{ .Params.title }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
